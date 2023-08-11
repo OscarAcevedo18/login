@@ -1,0 +1,33 @@
+
+<div class="container-fluid">
+  <ul class="navbar bg-body-tertiary list-unstyled">
+    <li class="nav-item active">
+      <a class="nav-link" href="/sesion/principal"
+        >Home <span class="sr-only"></span
+      ></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/sesion/ingenierias"
+        >Ingenierias 
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/sesion/proyeccion">Proyeccion</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/sesion/abastecimiento"
+        >Abastecimiento</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/sesion/entrega">Entrega</a>
+    </li>
+  </ul>
+</div>
+<li class="nav-item" *ngFor="let pagina of paginas">
+  <a class="nav-link">{{ pagina }}</a>
+</li>
+<button (click)="cerrarSesion()" class="btn btn-outline-success" type="button">
+  Cerrar Sesión
+</button>
+<router-outlet></router-outlet>
